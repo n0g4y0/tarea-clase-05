@@ -19,11 +19,18 @@ $botonCalcular.onclick = function()
 
 //TAREA: completar tareas/clase-5/index.html para que incluya tarea-clase-5.js
 
-console.log("incluido el archio JS");
+//console.log("incluido el archivo JS");
 
 //TAREA: crear un formulario donde un usuario pueda ingresar su salario anual.
+// se copio los archivos de la tarea 01.
+// se lo analizo.
+
+  
 //cuando el usuario haga click en el botón "calcular", mostrar el salario mensual
 // en una caja de texto deshabilitada. --> <input type="text" disabled id="salario-mensual"/>
+
+//<input type="number" disabled id="salario-mensual"/>
+
 
 //TAREA: En otro archivo html (no Index) y otro archivo js (no tarea-clase-5.js),
 // creá un formulario que capture el primer nombre, segundo nombre, apellido/s y edad del usuario

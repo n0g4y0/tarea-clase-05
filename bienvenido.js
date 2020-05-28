@@ -10,7 +10,3 @@ document.querySelector('#procesar-informacion').onclick = function(){
 
     return false;
 }
-
-function calcularSalarioMensual(salarioAnual){
-    return salarioAnual / 12;
-}

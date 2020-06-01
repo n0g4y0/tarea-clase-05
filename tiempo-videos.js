@@ -1,58 +1,46 @@
 document.querySelector('#calcular-total').onclick = function(){
-    
-  const segundosIngresados = Number(document.querySelector("#datos-segundos").value);
-  const minutosIngresados = Number(document.querySelector("#datos-minutos").value);
-  const horasIngresadas = Number(document.querySelector("#datos-horas").value);
 
-  let horasTotales = Number((document.querySelector("#total-horas").textContent));
-  let minutosTotales = Number((document.querySelector("#total-minutos").textContent));
-  let segundosTotales = Number((document.querySelector("#total-segundos").textContent));
+  function sumatoriaTiempo(nombreClase){
 
-  function agregarTiempoVideo(hora, minuto, segundo){
+    const datos = document.querySelectorAll(nombreClase);
+    console.log(datos);
+    let totalValor = 0;
 
-    let nuevoDiv = document.createElement("input");
-    //let nuevoContenido = document.createTextNode("hola que tal");
-    let inputHora = document.createElement("input");
-    inputHora.type = "number";
-    inputHora.value = hora;
-    inputHora.readOnly = true;
+    for(let i=0; i < datos.length ; i++){
 
-    let p = document.createElement("p");
+      totalValor += Number(datos[i].value);
 
-    let inputMinuto = document.createElement("input");
-    inputMinuto.type = "number";
-    inputMinuto.value = minuto;
-    inputMinuto.readOnly = true;
+    }
 
-    let inputSegundo = document.createElement("input");
-    inputSegundo.type = "number";
-    inputSegundo.value = segundo;
-    inputSegundo.readOnly = true;
+    console.log(totalValor);
 
-    let contenedor = document.querySelector("#contenedor");
-    contenedor.appendChild(p);
-    contenedor.appendChild(inputHora);
-    contenedor.appendChild(p);
-    contenedor.appendChild(inputMinuto);
-    contenedor.appendChild(p);
-    contenedor.appendChild(inputSegundo);
-    contenedor.appendChild(p);
-    
+    return totalValor;
+
 
   }
 
-  agregarTiempoVideo(horasIngresadas,minutosIngresados,segundosIngresados);
+
+    
+  const segundosIngresados = sumatoriaTiempo(".datos-segundos");
+  const minutosIngresados = sumatoriaTiempo(".datos-minutos");
+  const horasIngresadas = sumatoriaTiempo(".datos-horas");
+
+  let horasTotales = 0;
+  let minutosTotales = 0;
+  let segundosTotales = 0;
+
+  
+
+  
+
+  let segundosTemporales = segundosIngresados;
 
   
 
 
-  if(horasTotales === 0 && minutosTotales === 0 && segundosTotales === 0){
-    horasTotales += horasIngresadas;
-    minutosTotales += minutosIngresados;
-    segundosTotales += segundosIngresados;
-  }else{
+  
 
-    let segundosTemporales = segundosIngresados + segundosTotales;
+    
 
     minutosTotales += Math.trunc(segundosTemporales / 60);
     segundosTotales = Math.trunc(segundosTemporales % 60);
@@ -66,7 +54,7 @@ document.querySelector('#calcular-total').onclick = function(){
   
     horasTotales += horasIngresadas;
 
-  }
+  
 
   document.querySelector("#total-horas").textContent = horasTotales;
   document.querySelector("#total-minutos").textContent = minutosTotales;

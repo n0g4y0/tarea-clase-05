@@ -27,12 +27,10 @@ function calculoDelMayorValor(valoresACalcular){
 
     for(let i = 0 ; i < valoresACalcular.length; i++ ){
         
-
-        for(let j = 0; j < valoresACalcular.length; j++){
-                if(valoresACalcular[j] > numeroMayor){
-                    numeroMayor = valoresACalcular[j];
+                if(valoresACalcular[i] > numeroMayor){
+                    numeroMayor = valoresACalcular[i];
                 }
-        }
+        
 
     }
 
@@ -48,13 +46,9 @@ function calculoDelMenorValor(valoresACalcular){
 
     for(let i = 0 ; i < valoresACalcular.length; i++ ){
         
-
-        for(let j = 0; j < valoresACalcular.length; j++){
-                if(valoresACalcular[j] < numeroMenor){
-                    numeroMenor = valoresACalcular[j];
+                if(valoresACalcular[i] < numeroMenor){
+                    numeroMenor = valoresACalcular[i];
                 }
-        }
-
     }
 
     return numeroMenor;

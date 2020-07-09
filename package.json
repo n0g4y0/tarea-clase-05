@@ -1,0 +1,22 @@
+{
+  "name": "ejercicios_con_numeros",
+  "version": "1.0.0",
+  "description": "simples calculos matematicos",
+  "main": "bienvenido.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n0g4y0/tarea-clase-05.git"
+  },
+  "author": "n0g4y0",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/n0g4y0/tarea-clase-05/issues"
+  },
+  "homepage": "https://github.com/n0g4y0/tarea-clase-05#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.0"
+  }
+}
